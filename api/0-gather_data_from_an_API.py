@@ -23,5 +23,5 @@ if __name__ == '__main__':
         employee_name, nb_tasks_done, total_task
     ))
 
-    for task in tasks_data:
+    for task in tasks_complete:
         print(f"\t {task['title']}")
