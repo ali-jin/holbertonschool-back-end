@@ -15,15 +15,15 @@ if __name__ == '__main__':
     tasks_data = list_tasks.json()
 
     username = employee_data["username"]
+    user_id = employee_data["id"]
 
     employee_tasks = []
     csvheader = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
 
     for task in tasks_data:
-        listing = [f"{argv[1]}", username, task["completed"], task["title"]]
+        listing = [user_id, username, task["completed"], task["title"]]
         employee_tasks.append(listing)
 
     with open(f"{argv[1]}.csv", 'w') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
-        writer.writerow(csvheader)
         writer.writerows(employee_tasks)
