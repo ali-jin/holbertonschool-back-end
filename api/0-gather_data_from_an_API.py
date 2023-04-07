@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import requests
-from sys import argv
 """Returns information about the employee todo list progress
 that match the id"""
+import requests
+from sys import argv
 
 api_url = 'https://jsonplaceholder.typicode.com'
 
